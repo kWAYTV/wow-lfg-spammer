@@ -1,6 +1,6 @@
 import os
 try:
-    import os, time, colorama, pywin32
+    import os, time, colorama
     import win32com.client as comctl
     from colorama import Fore, Back, Style
     print(f"\n{Fore.MAGENTA}[{Fore.RESET}!{Fore.MAGENTA}] {Fore.RESET}Imports successful!")
@@ -12,7 +12,7 @@ except:
     time.sleep(1)
 
 # Imports
-import os, time, colorama, pywin32
+import os, time, colorama
 import win32com.client as comctl
 from colorama import Fore, Back, Style
 
@@ -31,8 +31,7 @@ os.system(f"title World of Warcraft - LFG Bot")
 print(Fore.MAGENTA + logo + Style.RESET_ALL)
 clear()
 
-# Get messageLF1M TANK/DPS SM LIB
-
+# Get message
 lfg = input(f"{Fore.YELLOW}[{Fore.WHITE}?{Fore.YELLOW}]{Fore.WHITE} Message{Fore.YELLOW} > {Fore.WHITE}")
 wsh = comctl.Dispatch("WScript.Shell")
 
@@ -58,7 +57,7 @@ while True:
         time.sleep(3)
         wsh.SendKeys("{ENTER}")
         time.sleep(1)
-        wsh.SendKeys(f"{lfg}")
+        wsh.SendKeys(f"/2 {lfg}")
         time.sleep(0.5)
         wsh.SendKeys("{ENTER}")
         print(f"{Fore.MAGENTA}[{Fore.WHITE}+{Fore.MAGENTA}]{Fore.WHITE} Message sent")
